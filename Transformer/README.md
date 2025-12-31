@@ -17,6 +17,14 @@ This project implements GPT-2, a state-of-the-art language model that uses the T
 Transformer/
 ├── gpt2.ipynb       # Main implementation notebook
 └── README.md        # This file
+
+## Architecture Diagram
+
+The following diagram illustrates the GPT-2 model architecture used in this repository.
+
+![GPT-2 Architecture](Transformer/gpt2_architecture.png)
+
+Note: save the provided image file as `Transformer/gpt2_architecture.png` so it displays here.
 ```
 
 ## Features
