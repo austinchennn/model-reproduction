@@ -10,6 +10,8 @@ Transformer/
 ├── 2_bert.ipynb            # BERT pre-training notebook
 ├── 2_bert_README.md        # BERT-specific notes
 ├── README.md               # This file
+├── weights/                # Saved model weights directory
+│   └── *.pth              # Model weight files
 ├── graph/
 │   └── gpt2_architecture.png
 └── paper/
@@ -18,8 +20,13 @@ Transformer/
 
 ## Notebooks
 
-- GPT-2: Open [1_gpt2.ipynb](1_gpt2.ipynb) for an end-to-end GPT-2 Small reproduction (architecture, training loop, and text generation).
-- BERT: Open [2_bert.ipynb](2_bert.ipynb) for BERT base pre-training tasks (MLM + NSP) and evaluation workflow. See [2_bert_README.md](2_bert_README.md) for details.
+- **GPT-2**: Open [1_gpt2.ipynb](1_gpt2.ipynb) for an end-to-end GPT-2 Small reproduction
+  - Complete architecture (SingleHeadAttention → MultiHeadAttention → Block → GPT)
+  - Training loop with AdamW optimizer and CosineAnnealingLR scheduler
+  - Text generation with autoregressive sampling
+  - Model weights saved in `weights/` directory
+  
+- **BERT**: Open [2_bert.ipynb](2_bert.ipynb) for BERT base pre-training tasks (MLM + NSP) and evaluation workflow. See [2_bert_README.md](2_bert_README.md) for details.
 
 ## Requirements
 
@@ -47,5 +54,7 @@ pip install -r requirements.txt
 
 ## Next Steps
 
-- Add dataset download scripts and minimal configs for quick-start runs.
-- Provide checkpoints or logging examples for reproducibility.
+- ✅ GPT-2 implementation with complete training and generation pipeline
+- ✅ Model weight management in `weights/` directory
+- Add more advanced generation strategies (beam search, top-k, nucleus sampling)
+- Provide pre-trained weights for quick inference demos
